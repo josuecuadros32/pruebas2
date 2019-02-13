@@ -1,0 +1,25 @@
+<br><br><br><br>
+<div class="container" [ngStyle]=" {'background-image': getUrl() }">
+  <br>
+
+ <div class="mt-5">
+   
+  
+   <div class="card" style="width: 66rem; ">
+    <div class="card-body ">
+      <h1 class="container bg-dark text-white text-center my-4 py-4">Empleado</h1>
+     <h5 class="text-black text-center text-monospace">Nombre: {{empleado.nombre}} {{empleado.apellido}} </h5>
+<h5 class="text-center text-black text-monospace">Email: {{empleado.email}}</h5>
+<h5 class="text-center text-black text-monospace">Telefono: {{empleado.telefono}}</h5>
+<h5 class="text-center text-black text-monospace">Especialidad: {{empleado.especialidad}}</h5>
+<h5 class="text-center text-black text-monospace">Edad: {{empleado.edad}}</h5><br>
+<h5 class=" text-black text-monospace text-center">Descricpion <br><br>
+  <p class="text-justify">{{empleado.descripcion}}</p>
+</h5>
+   </div>
+
+<div class="text-center"><a routerLink="/nosotros"><button class="btn btn-secondary"><i class="fas fa-reply"></i>Volver</button></a></div><br>
+  </div>
+ </div>
+ <br>
+</div>

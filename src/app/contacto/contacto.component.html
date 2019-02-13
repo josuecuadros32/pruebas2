@@ -1,0 +1,52 @@
+<br><br><br><br>
+<div class="container" [ngStyle]=" {'background-image': getUrl() }">
+<br>
+<div class="container">
+    
+  <h1 class="container bg-dark text-white text-center my-4 py-4 text-monospace">Contactenos</h1>
+
+<form #form="ngForm" (submit)="onSubmit(form)">
+
+  <!----Campo de nombre de usuario---->
+    <div class="form-group">
+     <label class="text-white text-monospace">Nombre:</label>
+        <input 
+        type="text" name="nombre" 
+        [(ngModel)]="nombre" placeholder="Ingrese su nombre" 
+        class="form-control"
+        required >
+    </div>
+
+   <!----Campo de comentarios--->
+      <div class="form-group">
+       <label class="text-white text-monospace">Comentarios</label>
+          <textarea class="form-control" required 
+          type="text" name="comentario" 
+          [(ngModel)]="comentario"></textarea>
+      </div>
+      
+     
+    <!----Boton de envio de comentario---->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg" 
+      [disabled]="form.invalid">Enviar</button>
+
+     <!----Boton para resetear formulario---->
+       <button type="reset" class="btn btn-lg btn-secondary"><i class="fas fa-redo"></i> Reset</button>
+    </div>
+</form>
+
+<div class="mt-5">
+ 
+  
+      <!----Lista de comentarios---->
+        <li class="list-group-item" *ngFor="let comentario of comentarios,">
+          <h6 class="text-monospace">Nombres: {{comentario.nombre}} </h6>
+          <h6 class="text-monospace">Comentario: {{comentario.comentario}}</h6>
+        </li>
+
+
+      </div>  
+   </div>
+   <br>
+</div>

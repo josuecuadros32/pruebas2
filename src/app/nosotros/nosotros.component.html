@@ -1,0 +1,48 @@
+<br><br>
+<div class="container" [ngStyle]="{'background-image': getUrl() }">
+ <section class="rom mt-5">
+  <div class="col">
+   <br>
+    <a routerLink="/newempleado"><button class="btn btn-primary float-right mb-3">Nuevo Empleado</button></a>
+     <table class="table table-hover">
+       
+      <thead class="bg-dark">
+       <tr>
+        <td class="text-white text-monospace" scope="col">#</td>
+        <td class="text-white text-monospace" scope="col">Nombre</td>
+        <td class="text-white text-monospace" scope="col">Apellido</td>
+        <td class="text-white text-monospace" scope="col">Especialidad</td>
+        <td class="text-white text-monospace" scope="col">Informacion</td>
+        <td class="text-white text-monospace" scope="col">&nbsp;</td>
+        <td class="text-white text-monospace" scope="col">&nbsp;</td>
+       </tr>
+      </thead>
+
+      <tbody>
+       <tr *ngFor="let empleado of empleados, index as i">
+        <th class="text-white text-monospace" scope="row"><h5>{{i+1}}</h5></th>
+         <td class="text-white text-monospace" scope="row">{{empleado.nombre}}</td>
+         <td class="text-white text-monospace" scope="row">{{empleado.apellido}}</td> 
+         <td scope="row"><h5>{{empleado.especialidad}}</h5></td> 
+         <td><a title="Saber mas..." class=" text-monospace" routerLink="/detalles/{{empleado.id}}"><h5>Detalles</h5></a></td>
+
+         <td><a routerLink="/newempleado"><button class="btn btn-primary" (click)="onPreUpdate(empleado)">Modificar</button></a></td>
+
+         <td><button class="btn btn-danger" (click)="onDeleteEmpleado(empleado.id)">Borrar</button></td>
+       </tr>
+
+       <tr>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+        <td scope="col"></td>
+       </tr>
+      </tbody>
+     </table>
+   </div>
+  </section>
+    <br><br>
+</div>

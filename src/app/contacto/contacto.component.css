@@ -1,0 +1,37 @@
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #414a59 !important;
+    border: 0;
+    color: #fff;
+}
+button[type='submit'] {
+    background-color: #338AFF;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding: 15px;
+    width: 45rem;
+}
+button[type='reset'] {
+    background-color: #66666F;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 1px;
+    padding: 15px;
+    width: 45rem;
+}
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948;
+    /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+    /* red */
+}
